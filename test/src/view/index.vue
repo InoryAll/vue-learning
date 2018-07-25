@@ -1,13 +1,29 @@
 <template>
-  <h1>Test</h1>
+  <div class="index-page">
+    <ScrollImg
+      :imgList="imgList"
+    />
+  </div>
 </template>
 
 <script>
+import ScrollImg from '../components/scrollImg';
+
 export default {
   name: 'index',
-  components: {},
+  components: {
+    ScrollImg,
+  },
   data() {
-    return {};
+    return {
+      imgList: [{
+        url: '#',
+        img: 'https://m.xyz.cn/p/picture/pic59686type28.jpg',
+      }, {
+        url: '#',
+        img: 'https://m.xyz.cn/p/picture/pic59686type28.jpg',
+      }],
+    };
   },
   computed: {
   },
