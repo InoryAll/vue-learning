@@ -1,8 +1,10 @@
 <template>
   <div class="index-page">
-    <ScrollImg
-      :imgList="imgList"
-    />
+    <div class="index-page-carousel">
+      <ScrollImg
+        :imgList="imgList"
+      />
+    </div>
   </div>
 </template>
 
