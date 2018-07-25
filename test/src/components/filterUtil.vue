@@ -34,38 +34,87 @@
         </button>
       </flexbox-item>
     </flexbox>
-    <div class="sort-pop-up"></div>
-    <div class="insurance-pop-up"></div>
-    <div class="filter-pop-up"></div>
+    <div class="sort-pop-up">
+      <div v-transfer-dom>
+        <popup
+          v-model="showSort"
+          :show-mask="false"
+          @on-hide="handlePopUpHide('sortActive')">
+          <div class="sort-pop-up-content">
+            1111111111
+          </div>
+        </popup>
+      </div>
+    </div>
+    <div class="insurance-pop-up">
+      <div v-transfer-dom>
+        <popup
+          v-model="showInsurance"
+          :show-mask="false"
+          @on-hide="handlePopUpHide('insuranceActive')">
+          <div class="sort-pop-up-content">
+            2222222222
+          </div>
+        </popup>
+      </div>
+    </div>
+    <div class="filter-pop-up">
+      <div v-transfer-dom>
+        <popup
+          v-model="showFilter"
+          :show-mask="false"
+          @on-hide="handlePopUpHide('filterActive')">
+          <div class="sort-pop-up-content">
+            33333333333
+          </div>
+        </popup>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { Flexbox, FlexboxItem } from 'vux';
+import { Flexbox, FlexboxItem, Popup, TransferDom } from 'vux';
 // eslint-disable-next-line
 import $ from 'jquery';
 
 export default {
   name: 'filter-util',
+  directives: {
+    TransferDom,
+  },
   components: {
     Flexbox,
     FlexboxItem,
+    Popup,
   },
   data() {
+    const sourceMap = new Map();
+    sourceMap.set('sortActive', 'showSort');
+    sourceMap.set('insuranceActive', 'showInsurance');
+    sourceMap.set('filterActive', 'showFilter');
     return {
+      showSort: false,
+      showInsurance: false,
+      showFilter: false,
       sortActive: 0,
       insuranceActive: 0,
       filterActive: 0,
+      sourceMap,
     };
   },
   computed: {},
   methods: {
     handleAnimationClick(paramName) {
+      this[this.sourceMap.get(paramName)] = !this[this.sourceMap.get(paramName)];
       if (this[paramName] === 0) {
         this[paramName] = 1;
         return;
       }
       this[paramName] = -1 * this[paramName];
+    },
+    handlePopUpHide(paramName) {
+      this[paramName] = -1;
     },
   },
 };
