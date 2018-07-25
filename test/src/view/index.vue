@@ -1,19 +1,24 @@
 <template>
   <div class="index-page">
     <div class="index-page-carousel">
-      <ScrollImg
+      <scroll-img
         :imgList="imgList"
       />
+    </div>
+    <div class="index-page-filter">
+      <filter-util />
     </div>
   </div>
 </template>
 
 <script>
 import ScrollImg from '../components/scrollImg';
+import FilterUtil from '../components/filterUtil';
 
 export default {
   name: 'index',
   components: {
+    FilterUtil,
     ScrollImg,
   },
   data() {
