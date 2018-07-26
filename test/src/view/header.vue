@@ -31,9 +31,11 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   .x-header-extend{
     border-bottom: 1px solid #d9d9d9;
+    z-index: 999;
+    background: #fff;
   }
   .right-action-btn{
     text-decoration: none;

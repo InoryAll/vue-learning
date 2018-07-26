@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="scroll-img">
     <swiper
       :list="mergedList"
       auto
@@ -41,5 +41,12 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+  .scroll-img{
+    z-index: 999;
+    background: #fff;
+  }
+  .vux-slider{
+    z-index: 999;
+  }
 </style>
