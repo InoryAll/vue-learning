@@ -1,6 +1,6 @@
 <template>
     <x-header :left-options="{ backText: ''}" class="x-header-extend">
-      <slot name="header-content">这里是顶部菜单栏</slot>
+      <slot name="header-content">新一站保险网</slot>
       <span slot="right">
         <a href="#" class="right-action-btn">
           <icon class="right-action-btn-icon" type="search"></icon>

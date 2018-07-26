@@ -1,0 +1,133 @@
+{
+  "code": 1,
+  "data": [
+    {
+      "productName": "一个测试用的产品名称",
+      "appearance": [
+        "小标签1",
+        "小标签2",
+        "小标签3"
+      ],
+      "age": [
+        "30days",
+        "17ages"
+      ],
+      "insurance": "1year",
+      "price": "110.00",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "des": [
+        {
+          "label": "测试价格1",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格2",
+          "value": "100000"
+        }
+      ]
+    },
+    {
+      "productName": "一个测试用的产品名称",
+      "appearance": [
+        "小标签1",
+        "小标签2",
+        "小标签3"
+      ],
+      "age": [
+        "30days",
+        "17ages"
+      ],
+      "insurance": "1year",
+      "price": "210.00",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "des": [
+        {
+          "label": "测试价格1",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格2",
+          "value": "100000"
+        },
+        {
+          "label": "测试价格3",
+          "value": "20000"
+        },
+        {
+          "label": "测试价格4",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格5",
+          "value": "50000"
+        }
+      ]
+    },
+    {
+      "productName": "一个测试用的产品名称",
+      "appearance": [
+        "小标签1",
+        "小标签2",
+        "小标签3"
+      ],
+      "age": [
+        "30days",
+        "17ages"
+      ],
+      "insurance": "1year",
+      "price": "310.00",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "des": [
+        {
+          "label": "测试价格1",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格2",
+          "value": "100000"
+        },
+        {
+          "label": "测试价格3",
+          "value": "20000"
+        },
+        {
+          "label": "测试价格4",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格5",
+          "value": "50000"
+        }
+      ]
+    },
+    {
+      "productName": "一个测试用的产品名称",
+      "appearance": [
+        "小标签1",
+        "小标签2",
+        "小标签3"
+      ],
+      "age": [
+        "30days",
+        "17ages"
+      ],
+      "insurance": "1year",
+      "price": "110.00",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "des": [
+        {
+          "label": "测试价格1",
+          "value": "10000"
+        },
+        {
+          "label": "测试价格2",
+          "value": "100000"
+        },
+        {
+          "label": "测试价格3",
+          "value": "20000"
+        }
+      ]
+    }
+  ]
+}
