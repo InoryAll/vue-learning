@@ -70,7 +70,7 @@
         position="top"
         @on-hide="handlePopUpHide('insuranceActive')">
         <div class="sort-pop-up-content">
-          <group>
+          <group class="checker-group">
             <checklist
               required
               :options="insuranceOptions"
@@ -91,7 +91,68 @@
           position="right"
           @on-hide="handlePopUpHide('filterActive')">
           <div class="sort-pop-up-content">
-            33333333333
+            <group title="性别">
+              <checker
+                default-item-class="default-checker"
+                selected-item-class="selected-checker"
+              >
+                <checker-item value="1">不限</checker-item>
+                <checker-item value="2">男</checker-item>
+                <checker-item value="3">女</checker-item>
+              </checker>
+            </group>
+            <group title="承保年龄">
+              <checker
+                default-item-class="default-checker"
+                selected-item-class="selected-checker"
+              >
+                <checker-item value="1">不限</checker-item>
+                <checker-item value="2">0-3周岁</checker-item>
+                <checker-item value="3">4-17周岁</checker-item>
+                <checker-item value="4">18-55周岁</checker-item>
+                <checker-item value="5">56-60周岁</checker-item>
+                <checker-item value="6">61-65周岁</checker-item>
+                <checker-item value="7">66-70周岁</checker-item>
+                <checker-item value="8">71-80周岁</checker-item>
+                <checker-item value="9">80周岁以上</checker-item>
+              </checker>
+            </group>
+            <group title="保险期间">
+              <checker
+                default-item-class="default-checker"
+                selected-item-class="selected-checker"
+              >
+                <checker-item value="1">不限</checker-item>
+                <checker-item value="2">1年</checker-item>
+                <checker-item value="3">至70周岁</checker-item>
+                <checker-item value="4">终身</checker-item>
+              </checker>
+            </group>
+            <group title="品牌商家">
+              <checker
+                default-item-class="default-checker"
+                selected-item-class="selected-checker"
+              >
+                <checker-item value="1">不限</checker-item>
+                <checker-item value="2">百年人寿</checker-item>
+                <checker-item value="3">平安养老</checker-item>
+                <checker-item value="4">人保健康</checker-item>
+                <checker-item value="5">人保财险</checker-item>
+                <checker-item value="6">史带财险</checker-item>
+                <checker-item value="7">太平洋产险</checker-item>
+                <checker-item value="8">太平养老</checker-item>
+                <checker-item value="9">中国平安</checker-item>
+                <checker-item value="10">安联财险</checker-item>
+                <checker-item value="11">安心保险</checker-item>
+                <checker-item value="12">泰康在线</checker-item>
+                <checker-item value="13">永安保险</checker-item>
+                <checker-item value="14">弘康人寿</checker-item>
+              </checker>
+            </group>
+            <div class="action-btn">
+              <button class="action-btn-reset">重置</button>
+              <button class="action-btn-success">完成</button>
+            </div>
           </div>
         </popup>
       </div>
@@ -100,7 +161,7 @@
 </template>
 
 <script>
-import { Flexbox, FlexboxItem, Popup, TransferDom, Group, Radio, Checklist } from 'vux';
+import { Flexbox, FlexboxItem, Popup, TransferDom, Group, Radio, Checklist, Checker, CheckerItem } from 'vux';
 // eslint-disable-next-line
 import $ from 'jquery';
 
@@ -116,6 +177,8 @@ export default {
     Group,
     Radio,
     Checklist,
+    Checker,
+    CheckerItem,
   },
   data() {
     const sourceMap = new Map();
@@ -223,12 +286,70 @@ export default {
     left: 0;
     top: 196px !important;
     text-align: left;
-  }
-  .slide-filter{
+    font-size: 14px;
+    p{
+      font-size: 14px;
+    }
+    .vux-label-desc{
+      font-size: 13px;
+      color: #999;
+    }
   }
   .pop-up-options{
+    font-size: 14px;
     margin: 0;
     padding: 0;
     text-align: left;
+  }
+  .slide-filter{
+    height: auto !important;
+    overflow-y: scroll !important;
+    max-height: none !important;
+    bottom: 0 !important;
+    background: #fff !important;
+    .weui-cells__title{
+      color: #666;
+      padding-left: 0;
+      margin-bottom: 0.7rem;
+    }
+    .weui-cells::before, .weui-cells::after{
+      display: none;
+    }
+    padding: 20px;
+  }
+  .default-checker {
+    border: 1px solid #ccc;
+    padding: 12px 0;
+    width: 30.33%;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .selected-checker {
+    border: 1px solid #f75730;
+    color: #f75730;
+  }
+  .action-btn{
+    position: fixed;
+    width: 80%;
+    bottom: 0;
+    background: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    &-reset, &-success{
+      outline: none;
+      color: #333;
+      border: 1px solid #999;
+      background: none;
+      font-size: 12px;
+      padding: 6px 14px;
+    }
+    &-success{
+      color: #f75730;
+      border-color: #f75730;
+    }
   }
 </style>

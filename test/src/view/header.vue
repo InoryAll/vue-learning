@@ -42,8 +42,8 @@ export default {
     font-size: 20px;
     font-weight: bold;
     &-icon{
-      font-size: 20px;
-      color: #333;
+      font-size: 20px !important;
+      color: #333 !important;
     }
   }
 </style>
