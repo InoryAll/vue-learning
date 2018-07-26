@@ -39,6 +39,8 @@
         <popup
           v-model="showSort"
           :show-mask="false"
+          class="dropdown-filter"
+          position="top"
           @on-hide="handlePopUpHide('sortActive')">
           <div class="sort-pop-up-content">
             1111111111
@@ -51,6 +53,8 @@
         <popup
           v-model="showInsurance"
           :show-mask="false"
+          class="dropdown-filter"
+          position="top"
           @on-hide="handlePopUpHide('insuranceActive')">
           <div class="sort-pop-up-content">
             2222222222
@@ -62,7 +66,10 @@
       <div v-transfer-dom>
         <popup
           v-model="showFilter"
-          :show-mask="false"
+          :show-mask="true"
+          class="slide-filter"
+          width="80%"
+          position="right"
           @on-hide="handlePopUpHide('filterActive')">
           <div class="sort-pop-up-content">
             33333333333
@@ -151,5 +158,12 @@ export default {
         vertical-align: middle;
       }
     }
+  }
+  .dropdown-filter{
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  .slide-filter{
   }
 </style>
