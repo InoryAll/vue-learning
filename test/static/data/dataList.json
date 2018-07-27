@@ -2,130 +2,94 @@
   "code": 1,
   "data": [
     {
-      "productName": "一个测试用的产品名称",
+      "productName": "新一站疾病综合保障计划（少儿版）",
       "appearance": [
-        "小标签1",
-        "小标签2",
-        "小标签3"
+        "70种重疾",
+        "10种轻症",
+        "少儿白血病叠加给付"
       ],
       "age": [
         "30days",
         "17ages"
       ],
       "insurance": "1year",
-      "price": "110.00",
+      "price": "55.00",
       "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
       "des": [
         {
-          "label": "测试价格1",
-          "value": "10000"
-        },
-        {
-          "label": "测试价格2",
+          "label": "重大疾病保险金",
+          "value": "100000"
+        }, {
+          "label": "轻症疾病保险金",
+          "value": "50000"
+        }, {
+          "label": "少儿白血病保险金",
           "value": "100000"
         }
       ]
     },
     {
-      "productName": "一个测试用的产品名称",
+      "productName": "安联臻爱医疗保险（2017）-基本计划（有社保）",
       "appearance": [
-        "小标签1",
-        "小标签2",
-        "小标签3"
+        "高额医疗保障",
+        "不限医保用药",
+        "特定疾病无免赔额"
       ],
       "age": [
         "30days",
-        "17ages"
+        "60days"
       ],
       "insurance": "1year",
       "price": "210.00",
-      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode625001-5.jpg",
       "des": [
         {
-          "label": "测试价格1",
+          "label": "意外伤害",
           "value": "10000"
         },
         {
-          "label": "测试价格2",
-          "value": "100000"
+          "label": "一般医疗保险金",
+          "value": "1000000"
         },
         {
-          "label": "测试价格3",
-          "value": "20000"
-        },
-        {
-          "label": "测试价格4",
-          "value": "10000"
-        },
-        {
-          "label": "测试价格5",
-          "value": "50000"
-        }
-      ]
+          "label": "特定疾病保险金",
+          "value": "1000000"
+        }]
     },
     {
-      "productName": "一个测试用的产品名称",
+      "productName": "少儿疾病保障（有医保）",
       "appearance": [
-        "小标签1",
-        "小标签2",
-        "小标签3"
+        "少儿健康",
+        "疾病门急诊",
+        "住院医疗"
       ],
       "age": [
-        "30days",
-        "17ages"
+        "28days",
+        "18ages"
       ],
       "insurance": "1year",
-      "price": "310.00",
-      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
+      "price": "365.00",
+      "imgUrl": "https://m.xyz.cn/p/brand/comCode660000-5.jpg",
       "des": [
         {
-          "label": "测试价格1",
-          "value": "10000"
-        },
-        {
-          "label": "测试价格2",
-          "value": "100000"
-        },
-        {
-          "label": "测试价格3",
-          "value": "20000"
-        },
-        {
-          "label": "测试价格4",
-          "value": "10000"
-        },
-        {
-          "label": "测试价格5",
+          "label": "意外伤害",
           "value": "50000"
-        }
-      ]
-    },
-    {
-      "productName": "一个测试用的产品名称",
-      "appearance": [
-        "小标签1",
-        "小标签2",
-        "小标签3"
-      ],
-      "age": [
-        "30days",
-        "17ages"
-      ],
-      "insurance": "1year",
-      "price": "110.00",
-      "imgUrl": "https://m.xyz.cn/p/brand/comCode654000-5.jpg",
-      "des": [
-        {
-          "label": "测试价格1",
-          "value": "10000"
         },
         {
-          "label": "测试价格2",
+          "label": "意外医疗",
           "value": "100000"
         },
         {
-          "label": "测试价格3",
-          "value": "20000"
+          "label": "疾病住院医疗",
+          "value": "30000"
+        },
+        {
+          "label": "意外住院补贴",
+          "value": "10000"
+        },
+        {
+          "label": "疾病门诊医疗",
+          "value": "50000"
         }
       ]
     }

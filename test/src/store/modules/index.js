@@ -17,23 +17,20 @@ const getters = {
 // 相当于reducer，用于数据存储
 const mutations = {
   getDataList(state, payload) {
-    return { ...state, ...payload };
+    state.code = payload.dataList.code;
+    state.data = payload.dataList.data;
   },
 };
 
 const actions = {
   getDataListAction({ commit }, payload) {
-    return new Promise((resolve, reject) => {
-      getDataListApi({ ...payload }, (data) => {
-        console.log(data);
-        commit({
-          type: 'getDataList',
-          data: data.dataList,
-        });
-        resolve(data);
-      }, (err) => {
-        reject(err);
+    getDataListApi({ ...payload }, (data) => {
+      commit({
+        type: 'getDataList',
+        dataList: data,
       });
+    }, (err) => {
+      console.log(err);
     });
   },
 };

@@ -11,14 +11,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    // apollo: {
-    //   namespaced: true,
-    //   modules: {
-    //     data: index,
-    //     filter,
-    //   },
-    // },
-    data: index,
-    filter,
+    apollo: {
+      namespaced: true,
+      modules: {
+        index,
+        filter,
+      },
+    },
   },
 });

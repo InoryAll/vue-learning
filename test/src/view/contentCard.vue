@@ -161,6 +161,7 @@ export default {
   },
   computed: {
     computedList() {
+      console.log(this.dataList);
       if (!this.dataList) {
         return this.formatDataList(this.defaultList);
       }
@@ -270,7 +271,7 @@ export default {
     padding: 10px 0;
     &-img{
       width: 80px;
-      height: 40px;
+      height: 30px;
     }
     &-tip{
       color: #f75730;

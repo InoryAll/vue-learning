@@ -9,7 +9,7 @@
       <filter-util />
     </div>
     <div class="index-page-content">
-      <content-card />
+      <content-card :dataList="dataList"/>
     </div>
   </div>
 </template>
@@ -39,15 +39,15 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      data: state => state.data,
+    ...mapState('apollo', {
+      dataList: state => state.index.data,
       filter: state => state.filter,
     }),
   },
   methods: {
-    ...mapActions(['getDataListAction', 'doFilter']),
+    ...mapActions('apollo', ['getDataListAction', 'doFilter']),
   },
-  mounted() {
+  created() {
     this.getDataListAction();
   },
 };
