@@ -228,6 +228,12 @@ export default {
   computed: {},
   methods: {
     handleAnimationClick(paramName) {
+      this.sourceMap.forEach((value, key) => {
+        if (this[this.sourceMap.get(paramName)]) {
+          return;
+        }
+        this[value] = false;
+      });
       this[this.sourceMap.get(paramName)] = !this[this.sourceMap.get(paramName)];
       if (this[paramName] === 0) {
         this[paramName] = 1;

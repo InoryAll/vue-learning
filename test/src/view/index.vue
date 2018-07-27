@@ -16,6 +16,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import $ from 'jquery';
 import ScrollImg from '../components/scrollImg';
 import FilterUtil from '../components/filterUtil';
 import ContentCard from './contentCard';
@@ -36,6 +37,7 @@ export default {
         url: '#',
         img: 'https://m.xyz.cn/p/picture/pic59686type28.jpg',
       }],
+      isShowIcon: false,
     };
   },
   computed: {
@@ -46,9 +48,17 @@ export default {
   },
   methods: {
     ...mapActions('apollo', ['getDataListAction', 'doFilter']),
+    handleTouchScroll() {
+      if ($(document).scrollTop > 0) {
+
+      }
+    },
   },
   created() {
     this.getDataListAction();
+  },
+  mounted() {
+    $(document).bind('scroll', this.handleTouchScroll);
   },
 };
 </script>
