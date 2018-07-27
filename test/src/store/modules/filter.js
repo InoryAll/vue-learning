@@ -22,7 +22,6 @@ const mutations = {
 
 const actions = {
   doFilter({ commit, state }, payload) {
-    console.log(state);
     commit({
       type: 'filter',
       ...payload,

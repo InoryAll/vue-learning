@@ -15,7 +15,6 @@ export default new Vuex.Store({
       namespaced: true,
       modules: {
         index,
-        filter,
       },
     },
   },

@@ -7,6 +7,8 @@ import { getDataListApi } from '../../api/index';
 const initState = {
   code: undefined,
   data: [],
+  filterType: '',
+  filterValue: '',
 };
 
 // 用于过滤数据
@@ -20,6 +22,10 @@ const mutations = {
     state.code = payload.dataList.code;
     state.data = payload.dataList.data;
   },
+  filter(state, payload) {
+    state.filterType = payload.filterType;
+    state.filterValue = payload.filterValue;
+  },
 };
 
 const actions = {
@@ -31,6 +37,12 @@ const actions = {
       });
     }, (err) => {
       console.log(err);
+    });
+  },
+  doFilter({ commit, state }, payload) {
+    commit({
+      type: 'filter',
+      ...payload,
     });
   },
 };
