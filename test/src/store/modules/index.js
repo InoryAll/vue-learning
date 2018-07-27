@@ -21,12 +21,12 @@ const handleSortFilter = (origin, filterValue) => {
       return origin;
     case '3':
       // eslint-disable-next-line
-      return origin.sort((pre, next) => {
+      return clonedOrigin.sort((pre, next) => {
         return parseFloat(pre.price) > parseFloat(next.price);
       });
     case '4':
       // eslint-disable-next-line
-      return origin.sort((pre, next) => {
+      return clonedOrigin.sort((pre, next) => {
         return parseFloat(pre.price) < parseFloat(next.price);
       });
     default:

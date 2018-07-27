@@ -183,8 +183,8 @@ export default {
       return newVal;
     },
     mapMoneyToMillion(val) {
-      const cloneVal = val;
-      return Math.round(cloneVal / 10000).toString().concat('万元');
+      const cloneVal = { ...val };
+      return Math.round(cloneVal.value / 10000).toString().concat('万元');
     },
     formatDataList(list) {
       const formatList = [];
@@ -194,9 +194,9 @@ export default {
         formatItem.insurance = this.mapAgeToCN(item.insurance);
         item.des.map((val) => {
           const newVal = val;
-          if (val.value.indexOf('万元') < 0) {
-            newVal.value = this.mapMoneyToMillion(val.value);
-          }
+//          if (val.value.indexOf('万元') < 0) {
+            newVal.value = this.mapMoneyToMillion(val);
+//          }
           formatItem.des.push(newVal);
           return true;
         });
