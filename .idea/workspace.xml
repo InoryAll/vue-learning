@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f195df13-ff4a-46b3-bf31-8b54937367f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/components/scrollTip.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/components/filterUtil.vue" afterPath="$PROJECT_DIR$/test/src/components/filterUtil.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/view/index.vue" afterPath="$PROJECT_DIR$/test/src/view/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -122,14 +119,9 @@
       <file leaf-file-name="filterUtil.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/src/components/filterUtil.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1642">
-              <caret line="168" column="22" lean-forward="true" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
-              <folding>
-                <element signature="e#6254#6367#0" expanded="false" />
-                <element signature="e#6378#7390#0" expanded="false" />
-                <element signature="e#7419#7918#0" expanded="false" />
-                <element signature="n#style#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="326">
+              <caret line="339" column="3" lean-forward="true" selection-start-line="339" selection-start-column="3" selection-end-line="339" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,6 +180,9 @@
       <find>dataList</find>
       <find>handleAnimationClick</find>
       <find>insuranceActive</find>
+      <find>handleSortChange</find>
+      <find>sort-pop-up-content</find>
+      <find>slide-filter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -457,12 +452,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531962388076</updated>
       <workItem from="1531962389268" duration="6556000" />
-      <workItem from="1532480437969" duration="68107000" />
+      <workItem from="1532480437969" duration="69303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74663000" />
+    <option name="totallyTimeSpent" value="75859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2241,14 +2236,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/components/filterUtil.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1642">
-          <caret line="168" column="22" lean-forward="true" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
-          <folding>
-            <element signature="e#6254#6367#0" expanded="false" />
-            <element signature="e#6378#7390#0" expanded="false" />
-            <element signature="e#7419#7918#0" expanded="false" />
-            <element signature="n#style#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="326">
+          <caret line="339" column="3" lean-forward="true" selection-start-line="339" selection-start-column="3" selection-end-line="339" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

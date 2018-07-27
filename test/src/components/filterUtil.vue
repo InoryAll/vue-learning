@@ -47,7 +47,7 @@
           @on-hide="handlePopUpHide('sortActive')">
           <div class="sort-pop-up-content">
             <group>
-              <radio :options="sortOptions">
+              <radio :options="sortOptions"  @on-change="handleSortChange">
                 <template
                   slot-scope="props"
                   slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
@@ -128,7 +128,7 @@
                 <checker-item value="4">终身</checker-item>
               </checker>
             </group>
-            <group title="品牌商家">
+            <group title="品牌商家" class="end">
               <checker
                 default-item-class="default-checker"
                 selected-item-class="selected-checker"
@@ -244,6 +244,12 @@ export default {
     handlePopUpHide(paramName) {
       this[paramName] = -1;
     },
+    handleSortChange(value, label) {
+      this.sourceMap.forEach((value, key) => {
+        this[value] = false;
+      });
+      console.log(value, label);
+    },
   },
 };
 </script>
@@ -357,5 +363,8 @@ export default {
       color: #f75730;
       border-color: #f75730;
     }
+  }
+  .end{
+    padding-bottom: 40px;
   }
 </style>
