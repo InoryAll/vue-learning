@@ -50,7 +50,6 @@ export default {
     ...mapActions('apollo', ['getDataListAction', 'doFilter']),
     handleTouchScroll() {
       if ($(document).scrollTop > 0) {
-
       }
     },
   },

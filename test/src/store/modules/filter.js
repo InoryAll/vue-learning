@@ -3,23 +3,26 @@ const initState = {
   filterValue: '',
 };
 
+const doFilterData = (origin, filterType, filterValue) => {
+  // console.log(origin);
+};
+
 const getters = {
   filterData: (state) => {
-    switch (state.filterType) {
-      default:
-        return state;
-    }
+    doFilterData(state);
   },
 };
 
 const mutations = {
   filter(state, payload) {
-    return { ...state, ...payload };
+    state.filterType = payload.filterType;
+    state.filterValue = payload.filterValue;
   },
 };
 
 const actions = {
-  doFilter({ commit }, payload) {
+  doFilter({ commit, state }, payload) {
+    console.log(state);
     commit({
       type: 'filter',
       ...payload,

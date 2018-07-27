@@ -164,6 +164,7 @@
 import { Flexbox, FlexboxItem, Popup, TransferDom, Group, Radio, Checklist, Checker, CheckerItem } from 'vux';
 // eslint-disable-next-line
 import $ from 'jquery';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'filter-util',
@@ -227,6 +228,7 @@ export default {
   },
   computed: {},
   methods: {
+    ...mapActions('apollo', ['doFilter']),
     handleAnimationClick(paramName) {
       this.sourceMap.forEach((value, key) => {
         if (this[this.sourceMap.get(paramName)]) {
@@ -249,6 +251,10 @@ export default {
         this[value] = false;
       });
       console.log(value, label);
+      this.doFilter({
+        filterType: 'sort',
+        filterValue: value,
+      });
     },
   },
 };
