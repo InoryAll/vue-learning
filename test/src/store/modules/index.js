@@ -11,9 +11,39 @@ const initState = {
   filterValue: '',
 };
 
+const handleSortFilter = (origin, filterValue) => {
+  const clonedOrigin = origin;
+  switch (filterValue) {
+    case '1':
+    case '2':
+      return origin;
+    case '3':
+      // eslint-disable-next-line
+      return clonedOrigin.sort((pre, next) => {
+        return parseFloat(pre.price) > parseFloat(next.price);
+      });
+    case '4':
+      // eslint-disable-next-line
+      return clonedOrigin.sort((pre, next) => {
+        return parseFloat(pre.price) < parseFloat(next.price);
+      });
+    default:
+      return origin;
+  }
+};
+
+const doFilterData = (origin, filterType, filterValue) => {
+  switch (filterType) {
+    case 'sort':
+      return handleSortFilter(origin, filterValue);
+    default:
+      return origin;
+  }
+};
+
 // 用于过滤数据
 const getters = {
-  filterDataList: state => state,
+  filterDataList: state => doFilterData(state.data, state.filterType, state.filterValue),
 };
 
 // 相当于reducer，用于数据存储

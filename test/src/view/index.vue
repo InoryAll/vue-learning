@@ -9,13 +9,13 @@
       <filter-util />
     </div>
     <div class="index-page-content">
-      <content-card :dataList="dataList"/>
+      <content-card :dataList="filterDataList"/>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapActions, mapState, mapGetters } from 'vuex';
 import $ from 'jquery';
 import ScrollImg from '../components/scrollImg';
 import FilterUtil from '../components/filterUtil';
@@ -45,6 +45,7 @@ export default {
       dataList: state => state.index.data,
       filter: state => state.filter,
     }),
+    ...mapGetters('apollo', ['filterDataList']),
   },
   methods: {
     ...mapActions('apollo', ['getDataListAction', 'doFilter']),

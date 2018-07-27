@@ -161,7 +161,6 @@ export default {
   },
   computed: {
     computedList() {
-      console.log(this.dataList);
       if (!this.dataList) {
         return this.formatDataList(this.defaultList);
       }

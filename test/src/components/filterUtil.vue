@@ -250,7 +250,6 @@ export default {
       this.sourceMap.forEach((value, key) => {
         this[value] = false;
       });
-      console.log(value, label);
       this.doFilter({
         filterType: 'sort',
         filterValue: value,
