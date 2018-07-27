@@ -1,11 +1,12 @@
 /**
  * 基于ajax的封装类
  */
+/* eslint-disable */
 import $ from 'jquery';
 
 class ajaxRequest {
   static createAjaxRequest(options) {
-    return function (payload, successCallback, errorCallBack) {
+    return (payload, successCallback, errorCallBack) => {
       $.ajax({
         url: options.url,
         type: options.method,
@@ -22,4 +23,4 @@ class ajaxRequest {
   }
 }
 
-module.exports = ajaxRequest;
+export default ajaxRequest;

@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 import ScrollImg from '../components/scrollImg';
 import FilterUtil from '../components/filterUtil';
 import ContentCard from './contentCard';
@@ -38,8 +39,16 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      data: state => state.data,
+      filter: state => state.filter,
+    }),
   },
   methods: {
+    ...mapActions(['getDataListAction', 'doFilter']),
+  },
+  mounted() {
+    this.getDataListAction();
   },
 };
 </script>
