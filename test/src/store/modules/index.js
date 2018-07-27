@@ -12,7 +12,8 @@ const initState = {
 };
 
 const handleSortFilter = (origin, filterValue) => {
-  const clonedOrigin = origin;
+  const clonedOrigin = [];
+  origin.map(val => clonedOrigin.push(val));
   switch (filterValue) {
     case '1':
     case '2':
