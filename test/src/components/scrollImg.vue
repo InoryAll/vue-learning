@@ -45,6 +45,9 @@ export default {
   .scroll-img{
     z-index: 999;
     background: #fff;
+    div{
+      z-index: 999;
+    }
   }
   .vux-slider{
     z-index: 999;

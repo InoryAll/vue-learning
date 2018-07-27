@@ -56,6 +56,7 @@
     "jquery": "^3.3.1",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
+    "lodash": "^4.17.10",
     "nightwatch": "^0.9.12",
     "node-notifier": "^5.1.2",
     "normalize.css": "^8.0.0",

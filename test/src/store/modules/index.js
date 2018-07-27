@@ -1,6 +1,7 @@
 /**
  * vuex数据相关
  */
+import _ from 'lodash';
 import { getDataListApi } from '../../api/index';
 
 // 初始状态
@@ -13,8 +14,7 @@ const initState = {
 
 // 按照筛选值对数据过滤并返回
 const handleSortFilter = (origin, filterValue) => {
-  const clonedOrigin = [];
-  origin.map(val => clonedOrigin.push(val));
+  const clonedOrigin = _.cloneDeep(origin);
   switch (filterValue) {
     case '1':
     case '2':
@@ -54,7 +54,7 @@ const getters = {
 const mutations = {
   getDataList(state, payload) {
     state.code = payload.dataList.code;
-    state.data = payload.dataList.data;
+    state.data = [ ...payload.dataList.data ];
   },
   filter(state, payload) {
     state.filterType = payload.filterType;

@@ -65,6 +65,7 @@
 
 <script>
 import { Card } from 'vux';
+import _ from 'lodash';
 
 export default {
   name: 'content-card',
@@ -162,9 +163,11 @@ export default {
   computed: {
     computedList() {
       if (!this.dataList) {
-        return this.formatDataList(this.defaultList);
+        const clonedList = _.cloneDeep(this.defaultList);
+        return this.formatDataList(clonedList);
       }
-      return this.formatDataList([...this.dataList]);
+      const clonedList = _.cloneDeep(this.dataList);
+      return this.formatDataList(clonedList);
     },
   },
   methods: {
@@ -183,8 +186,8 @@ export default {
       return newVal;
     },
     mapMoneyToMillion(val) {
-      const cloneVal = { ...val };
-      return Math.round(cloneVal.value / 10000).toString().concat('万元');
+      const cloneVal = val;
+      return Math.round(cloneVal / 10000).toString().concat('万元');
     },
     formatDataList(list) {
       const formatList = [];
@@ -194,9 +197,7 @@ export default {
         formatItem.insurance = this.mapAgeToCN(item.insurance);
         item.des.map((val) => {
           const newVal = val;
-//          if (val.value.indexOf('万元') < 0) {
-            newVal.value = this.mapMoneyToMillion(val);
-//          }
+          newVal.value = this.mapMoneyToMillion(val.value);
           formatItem.des.push(newVal);
           return true;
         });
