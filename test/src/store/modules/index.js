@@ -11,6 +11,7 @@ const initState = {
   filterValue: '',
 };
 
+// 按照筛选值对数据过滤并返回
 const handleSortFilter = (origin, filterValue) => {
   const clonedOrigin = [];
   origin.map(val => clonedOrigin.push(val));
@@ -33,6 +34,8 @@ const handleSortFilter = (origin, filterValue) => {
   }
 };
 
+
+// 筛选过滤类型
 const doFilterData = (origin, filterType, filterValue) => {
   switch (filterType) {
     case 'sort':
@@ -62,6 +65,7 @@ const mutations = {
 const actions = {
   getDataListAction({ commit }, payload) {
     getDataListApi({ ...payload }, (data) => {
+      console.log(data);
       commit({
         type: 'getDataList',
         dataList: data,
@@ -71,6 +75,7 @@ const actions = {
     });
   },
   doFilter({ commit, state }, payload) {
+    // actions.getDataListAction({ commit }, payload);
     commit({
       type: 'filter',
       ...payload,

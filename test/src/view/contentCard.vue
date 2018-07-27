@@ -164,7 +164,7 @@ export default {
       if (!this.dataList) {
         return this.formatDataList(this.defaultList);
       }
-      return this.formatDataList(this.dataList);
+      return this.formatDataList([...this.dataList]);
     },
   },
   methods: {
@@ -183,7 +183,8 @@ export default {
       return newVal;
     },
     mapMoneyToMillion(val) {
-      return Math.round(val / 10000).toString().concat('万元');
+      const cloneVal = val;
+      return Math.round(cloneVal / 10000).toString().concat('万元');
     },
     formatDataList(list) {
       const formatList = [];
@@ -193,7 +194,9 @@ export default {
         formatItem.insurance = this.mapAgeToCN(item.insurance);
         item.des.map((val) => {
           const newVal = val;
-          newVal.value = this.mapMoneyToMillion(val.value);
+          if (val.value.indexOf('万元') < 0) {
+            newVal.value = this.mapMoneyToMillion(val.value);
+          }
           formatItem.des.push(newVal);
           return true;
         });
